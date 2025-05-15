@@ -5,7 +5,6 @@ from credenciais import senha_app
 
 Date = date.today() + timedelta(0)
 print("Data de Análise:", Date)
-print(senha_app)
 
 faturamento = 1500
 qtd_produtos = 10
