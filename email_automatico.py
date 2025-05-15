@@ -1,9 +1,11 @@
 import smtplib
 from email.message import EmailMessage
 from datetime import date, timedelta
+from credenciais import senha_app
 
 Date = date.today() + timedelta(0)
 print("Data de Análise:", Date)
+print(senha_app)
 
 faturamento = 1500
 qtd_produtos = 10
@@ -21,7 +23,7 @@ def enviar_email():
     msg['Subject'] = "6 Horas Email automatizado"
     msg['From'] = 'raysonbernardodasilva@gmail.com'
     msg['To'] = 'rayson.bs@hotmail.com'
-    password = 'zufk yeit ytsr qqbq'
+    password = senha_app
     msg.set_content(corpo_email, subtype='html')
 
     s = smtplib.SMTP('smtp.gmail.com', 587)
@@ -29,6 +31,6 @@ def enviar_email():
     s.login(msg['From'], password)
     s.send_message(msg)
     s.quit()
-    print('Email enviado')
+    print('Email enviado e consolidado')
 
 enviar_email()
