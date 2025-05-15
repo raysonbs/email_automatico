@@ -30,6 +30,6 @@ def enviar_email():
     s.login(msg['From'], password)
     s.send_message(msg)
     s.quit()
-    print('Email enviado e consolidado')
+    print('Email enviado e consolidado final')
 
 enviar_email()
